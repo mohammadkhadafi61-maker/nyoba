@@ -1,0 +1,98 @@
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-800">Koleksi Bunga Segar</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 mt-1">Eksplorasi Rangkaian Terbaik</h2>
+          <p id="products-count" class="text-xs text-stone-500 mt-1">Memuat katalog bunga...</p>
+        </div>
+        <!-- Search Bar -->
+        <div class="w-full md:w-80 relative">
+          <input type="text" id="search-input" placeholder="Cari mawar, tulip, wisuda, lily..." class="w-full text-xs py-2.5 pl-9 pr-4 rounded-full border border-stone-300 bg-white shadow-sm focus:outline-none focus:border-emerald-800 focus:ring-1 focus:ring-emerald-800" />
+          <svg class="absolute left-3 top-3 text-stone-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </div>
+      </div>
+      <!-- Category Filter Pills (Horizontal scrollable on mobile) -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-4 scrollbar-none" id="category-filters">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+      <!-- Secondary Filter: Occasions & Sorting -->
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-stone-200 mb-8">
+        <div class="flex items-center gap-2 overflow-x-auto pb-1" id="occasion-filters">
+          <!-- Rendered dynamically via app.js -->
+        </div>
+        <!-- Sorting Dropdown -->
+        <div class="flex items-center gap-2 ml-auto text-xs text-stone-600">
+          <label for="sort-select" class="font-medium">Urutkan:</label>
+          <select id="sort-select" class="bg-white border border-stone-300 rounded-lg px-2.5 py-1.5 text-xs text-stone-800 focus:outline-none focus:border-emerald-800">
+            <option value="popular">Paling Populer</option>
+            <option value="price-low">Harga: Terendah ke Tertinggi</option>
+            <option value="price-high">Harga: Tertinggi ke Terendah</option>
+            <option value="rating">Rating Tertinggi</option>
+          </select>
+        </div>
+      </div>
+      <!-- Products Grid -->
+      <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+    </div>
+  </section>
+  <!-- Keunggulan & Garansi -->
+  <section id="keunggulan" class="py-16 bg-white border-t border-stone-200">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6">
+          <span class="text-xs font-bold uppercase tracking-wider 
+                        <span class="font-bold text-[11px]">Transfer Bank</span>
+              <span class="text-[9px] text-stone-400">BCA / Mandiri</span>
+            </label>
+            <label class="border border-stone-300 rounded-lg p-2.5 flex flex-col items-center justify-center cursor-pointer hover:border-emerald-800 transition-colors text-center has-[:checked]:border-emerald-800 has-[:checked]:bg-emerald-50">
+              <input type="radio" name="payment_method" value="COD (Bayar di Tempat)" class="mb-1 text-emerald-800" />
+              <span class="font-bold text-[11px]">COD</span>
+              <span class="text-[9px] text-stone-400">Bayar di Tempat</span>
+            </label>
+          </div>
+        </div>
+        <!-- Notes -->
+        <div>
+          <input type="text" id="order-notes" placeholder="Catatan tambahan (misal: titip satpam, foto sebelum kirim)" class="text-xs p-2.5 rounded-lg border border-stone-300 w-full focus:outline-none focus:ring-1 focus:ring-emerald-800" />
+        </div>
+        <!-- Submit Button -->
+        <button type="submit" id="btn-submit-order" class="btn-primary w-full py-3 text-sm font-bold justify-center">
+          Konfirmasi & Proses Pesanan
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- Order Success Modal -->
+  <div id="success-modal" class="modal-overlay">
+    <div class="modal-content max-w-md p-6 text-center">
+      <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-3xl mx-auto mb-3">
+        💐
+      </div>
+      <h3 class="text-xl font-bold font-serif text-stone-900 mb-1">Pesanan Berhasil Diterima!</h3>
+      <p class="text-xs text-stone-500 mb-4">
+        Terima kasih! Pesanan Anda telah masuk ke antrean floristry kami.
+      </p>
+      <div class="inline-block bg-stone-100 px-3 py-1 rounded-full text-xs font-mono font-bold text-stone-800 mb-4">
+        ID Pesanan: <span id="success-order-code">FLR-123456</span>
+      </div>
+      <div id="success-order-details" class="mb-6 text-left">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="space-y-2">
+        <button id="btn-success-wa" class="btn-whatsapp w-full py-3 text-xs font-bold justify-center">
+          💬 Konfirmasi & Kirim Bukti ke WhatsApp Admin
+        </button>
+        <button class="modal-close btn-secondary w-full py-2.5 text-xs font-bold justify-center">
+          Tutup & Kembali Berbelanja
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Application Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
