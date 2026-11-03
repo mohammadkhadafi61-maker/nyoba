@@ -169,9 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {});
           </div>
         </div>
       `
-    }).join('');
-  }
-
+    
   // Event Listener Search & Sort
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
